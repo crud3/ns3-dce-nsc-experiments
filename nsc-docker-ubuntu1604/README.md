@@ -1,6 +1,8 @@
 # NSC on Ubuntu 16.04
 ## Build environment / Docker image
-The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile and https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile 
+The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile  
+and  
+https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile  
 Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint). NSC is built using the SCONS build system. (TODO and maybe add building with bake). Ubuntu 16.04 already uses gcc-5, so no modifications to the gcc versions were made.
 
 ## Errors
