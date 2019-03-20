@@ -1,0 +1,697 @@
+Waf: Entering directory `/home/ns3dce/dce-linux-dev/source/ns-3-dce/build'
+[ 10/369] Creating build/lib/pkgconfig/libns3-dev-netlink-debug.pc
+[116/369] Creating build/lib/pkgconfig/libns3-dev-dce-debug.pc
+Waf: Leaving directory `/home/ns3dce/dce-linux-dev/source/ns-3-dce/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.606s)
+NS3_ENABLED_MODULES == []
+NS3_MODULE_PATH == ['/usr/lib/gcc/x86_64-linux-gnu/5']
+NSC_ENABLED == False
+ENABLE_REAL_TIME == False
+ENABLE_THREADING == False
+ENABLE_EXAMPLES == True
+ENABLE_TESTS == True
+EXAMPLE_DIRECTORIES == .
+ENABLE_PYTHON_BINDINGS == False
+ENABLE_CLICK == False
+ENABLE_OPENFLOW == False
+APPNAME == 
+BUILD_PROFILE == 
+VERSION == 
+PYTHON == ['/usr/bin/python']
+VALGRIND_FOUND == False
+Building: ./waf
+os.environ["PYTHONPATH"] == /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bindings/python
+os.environ["LD_LIBRARY_PATH"] == :/usr/lib/gcc/x86_64-linux-gnu/5:/home/ns3dce/dce-linux-dev/source/ns-3-dce/build/lib:/home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin:/home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin_dce:/home/ns3dce/dce-linux-dev/build/lib:/home/ns3dce/dce-linux-dev/build/lib64:/home/ns3dce/dce-linux-dev/build/sbin:/home/ns3dce/dce-linux-dev/build/bin_dce:/home/ns3dce/dce-linux-dev/build/bin
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --print-test-name-list
+Return code =  0
+stderr =  
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/utils/test-runner --print-test-name-list --test-type=performance
+Return code =  127
+stderr =  /bin/sh: 1: /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/utils/test-runner: not found
+
+Queue dce-netlink-socket
+Queue dce-process-manager
+Launch bin/test-runner --test-name=dce-netlink-socket --stop-on-failure --fullness=QUICKQueue dce-cradle
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --test-name=dce-netlink-socket --stop-on-failure --fullness=QUICK --xml --tempdir=testpy-output/2019-03-20-16-44-14-CUT --out=dce-netlink-socket.xml 
+
+Queue dce-mptcp
+Queue dce-linux-ip6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-perf
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-short-stuff
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-bash-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-dccp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp -ccid=3
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp -ccid=3
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6 -ccid=3
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6 -ccid=3
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp6
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --bulk=1
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce --bulk=1
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp --bulk=1
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-mptcp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-mptcp
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-heterogeneous-multihop
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-httpd
+Queue /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-freebsd
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch bin/test-runner --test-name=dce-process-manager --stop-on-failure --fullness=QUICK
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --test-name=dce-process-manager --stop-on-failure --fullness=QUICK --xml --tempdir=testpy-output/2019-03-20-16-44-14-CUT --out=dce-process-manager.xml 
+PASS: TestSuite dce-netlink-socket
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch bin/test-runner --test-name=dce-cradle --stop-on-failure --fullness=QUICK
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --test-name=dce-cradle --stop-on-failure --fullness=QUICK --xml --tempdir=testpy-output/2019-03-20-16-44-14-CUT --out=dce-cradle.xml 
+PASS: TestSuite dce-process-manager
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch bin/test-runner --test-name=dce-mptcp --stop-on-failure --fullness=QUICKPASS: TestSuite dce-cradle
+
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --test-name=dce-mptcp --stop-on-failure --fullness=QUICK --xml --tempdir=testpy-output/2019-03-20-16-44-14-CUT --out=dce-mptcp.xml 
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+.net.mptcp.mptcp_debug=
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+Total Rx(0) = 5120 bytes
+Probably failed? Because mptcp disabled kernel. SKIP.
+.net.mptcp.mptcp_debug=
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+saddr1 = 10.1.0.1
+Probably failed? Because mptcp disabled kernel. SKIP.
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch bin/test-runner --test-name=dce-linux-ip6 --stop-on-failure --fullness=QUICK
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/test-runner --test-name=dce-linux-ip6 --stop-on-failure --fullness=QUICK --xml --tempdir=testpy-output/2019-03-20-16-44-14-CUT --out=dce-linux-ip6.xml 
+PASS: TestSuite dce-mptcp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-simple
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-simple
+PASS: TestSuite dce-linux-ip6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-simple
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-simple
+PASS: Example dce-tcp-simple
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-udp-simple
+ Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-perf
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-udp-perf
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Packet Number:3932
+Real duration : 3
+DataRate:588235
+Packets / second :1310
+Bytes / second1966000
+Ratio : 3.3422
+OK 3932 TAKE LESS OR EQUAL TIME
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-simple
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-simple
+ PASS: Example dce-udp-perf
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-short-stuff
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-ccnd-short-stuff
+PASS: Example dce-ccnd-simple
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-bash-simple
+ PASS: Example dce-ccnd-short-stuffSynchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-bash-simple
+
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux-simple
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux-simple
+PASS: Example dce-bash-simple
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux
+ PASS: Example dce-linux-simpleSynchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-linux
+
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-linux
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-dccp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-dccp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-dccp
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple
+PASS: Example dce-iperf
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 1024 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp
+PASS: Example dce-cradle-simple
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19836 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp
+ PASS: Example dce-cradle-simple --rate=10kbps --proto=icmp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp
+PASS: Example dce-cradle-simple --rate=10kbps --proto=udp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-cradle-simple --rate=10kbps --proto=tcp
+ Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp -ccid=3
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp -ccid=3
+PASS: Example dce-cradle-simple --rate=10kbps --proto=dccp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp
+PASS: Example dce-cradle-simple --rate=10kbps --proto=dccp -ccid=3
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-cradle-simple --rate=10kbps --proto=sctp
+ Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 512 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 1024 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp -ccid=3
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp -ccid=3
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 512 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp -ccid=3
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 1024 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=icmp6
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=udp6
+PASS: Example dce-cradle-simple --rate=10kbps --proto=icmp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp6
+ PASS: Example dce-cradle-simple --rate=10kbps --proto=udp6Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=tcp6
+
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6
+PASS: Example dce-cradle-simple --rate=10kbps --proto=tcp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6 -ccid=3
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=dccp6 -ccid=3
+PASS: Example dce-cradle-simple --rate=10kbps --proto=dccp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp6PASS: Example dce-cradle-simple --rate=10kbps --proto=dccp6 -ccid=3
+
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --rate=10kbps --proto=sctp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 19456 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp6
+PASS: Example dce-cradle-simple --rate=10kbps --proto=sctp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 0 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=tcp6
+ Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 0 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6 -ccid=3
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6 -ccid=3
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 0 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp6
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp6
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=dccp6 -ccid=3
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 0 bytes
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-cradle-simple --bulk=1 --rate=10kbps --proto=sctp6
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 867328 bytes (433664 bps), Rx(1) = 754400 bytes (377200 bps),  total = 810864 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce
+PASS: Example dce-tcp-ns3-nsc-comparison
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 867328 bytes (433664 bps), Rx(1) = 754400 bytes (377200 bps),  total = 810864 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --bulk=1
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --bulk=1
+PASS: Example dce-tcp-ns3-nsc-comparison --stack=dce
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 1003216 bytes (501608 bps), Rx(1) = 641640 bytes (320820 bps),  total = 822428 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce --bulk=1
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce --bulk=1PASS: Example dce-tcp-ns3-nsc-comparison --bulk=1
+
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 1003216 bytes (501608 bps), Rx(1) = 641640 bytes (320820 bps),  total = 822428 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp
+PASS: Example dce-tcp-ns3-nsc-comparison --stack=dce --bulk=1
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 546816 bytes (273408 bps), Rx(1) = 561152 bytes (280576 bps),  total = 553984 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+PASS: Example dce-tcp-ns3-nsc-comparison --stack=dce-dccp
+ Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp --bulk=1
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-tcp-ns3-nsc-comparison --stack=dce-dccp --bulk=1
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+Total Rx(0) = 629760 bytes (314880 bps), Rx(1) = 514048 bytes (257024 bps),  total = 571904 bps
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-mptcp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-cradle-mptcp
+PASS: Example dce-tcp-ns3-nsc-comparison --stack=dce-dccp --bulk=1
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-mptcp
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-mptcp
+PASS: Example dce-cradle-mptcp
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-heterogeneous-multihop
+PASS: Example dce-iperf-mptcp
+ Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-iperf-heterogeneous-multihop
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+SYSCTL(client): .net.ipv4.tcp_congestion_control => reno
+SYSCTL(client): .net.core.wmem_max => 204800
+SYSCTL(client): .net.core.wmem_default => 204800
+SYSCTL(client): .net.core.rmem_max => 204800
+SYSCTL(client): .net.core.rmem_default => 204800
+SYSCTL(server): .net.ipv4.tcp_congestion_control => reno
+SYSCTL(server): .net.core.wmem_max => 204800
+SYSCTL(server): .net.core.wmem_default => 204800
+SYSCTL(server): .net.core.rmem_max => 204800
+SYSCTL(server): .net.core.rmem_default => 204800
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-httpd
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-httpd
+PASS: Example dce-iperf-heterogeneous-multihop
+Return code =  0
+stderr =  
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+
+---------- end standard err ----------
+Launch /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-freebsd
+Synchronously execute /home/ns3dce/dce-linux-dev/source/ns-3-dce/build/bin/dce-freebsd
+PASS: Example dce-httpd
+Return code =  0
+stderr =  no libfreebsd.so found. exit.
+
+returncode = 0
+---------- begin standard out ----------
+
+---------- begin standard err ----------
+no libfreebsd.so found. exit.
+
+---------- end standard err ----------
+PASS: Example dce-freebsd
+47 of 47 tests passed (47 passed, 0 skipped, 0 failed, 0 crashed, 0 valgrind errors)

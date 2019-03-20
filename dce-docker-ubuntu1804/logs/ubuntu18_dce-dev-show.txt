@@ -1,0 +1,132 @@
+module: lksctp-dev (enabled)
+  No dependencies!
+module: libssl-dev (enabled)
+  No dependencies!
+module: flex (enabled)
+  No dependencies!
+module: bison (enabled)
+  No dependencies!
+module: libdb-dev (enabled)
+  No dependencies!
+module: iperf (enabled)
+  No dependencies!
+module: libexpat-dev (enabled)
+  No dependencies!
+module: libpcap-dev (enabled)
+  No dependencies!
+module: clang-dev (enabled)
+  No dependencies!
+module: bash (enabled)
+  No dependencies!
+module: thttpd (enabled)
+  No dependencies!
+module: wget (enabled)
+  No dependencies!
+module: net-next-nuse-4.4.0 (enabled)
+  No dependencies!
+module: setuptools (enabled)
+  No dependencies!
+module: pygoocanvas (enabled)
+  No dependencies!
+module: pygraphviz (enabled)
+  No dependencies!
+module: python-dev (enabled)
+  No dependencies!
+module: libaspect (enabled)
+  No dependencies!
+module: libc (enabled)
+  No dependencies!
+module: qt (enabled)
+  No dependencies!
+module: g++ (enabled)
+  No dependencies!
+module: iproute2-4.4.0 (enabled)
+  depends on:
+     libdb-dev (optional:False)
+     bison (optional:False)
+     flex (optional:False)
+     libssl-dev (optional:False)
+module: ccnx (enabled)
+  depends on:
+     libpcap-dev (optional:False)
+     libexpat-dev (optional:False)
+module: pyviz-prerequisites (enabled)
+  depends on:
+     python-dev (optional:True)
+     pygraphviz (optional:True)
+     pygoocanvas (optional:True)
+module: castxml (enabled)
+  depends on:
+     clang-dev (optional:False)
+module: netanim (enabled)
+  depends on:
+     qt (optional:False)
+     g++ (optional:False)
+module: libc-debug (enabled)
+  depends on:
+     libc (optional:False)
+module: pygccxml (enabled)
+  depends on:
+     castxml (optional:False)
+     setuptools (optional:False)
+module: elf-loader (enabled)
+  depends on:
+     libc-debug (optional:False)
+module: pybindgen (enabled)
+  depends on:
+     pygccxml (optional:True)
+     python-dev (optional:True)
+     setuptools (optional:False)
+module: ns-3-dev (enabled)
+  depends on:
+     netanim (optional:True)
+     pybindgen (optional:True)
+     pyviz-prerequisites (optional:True)
+module: dce-meta-dev (enabled)
+  depends on:
+     ns-3-dev (optional:False)
+     elf-loader (optional:True)
+     libaspect (optional:True)
+     iperf (optional:True)
+     ccnx (optional:True)
+     wget (optional:True)
+     thttpd (optional:True)
+     bash (optional:True)
+module: dce-linux-dev (enabled)
+  depends on:
+     dce-meta-dev (optional:False)
+     net-next-nuse-4.4.0 (optional:False)
+     iproute2-4.4.0 (optional:False)
+     lksctp-dev (optional:True)
+
+-- System Dependencies --
+ > bison - OK
+ > clang-dev - OK
+ > flex - OK
+ > g++ - OK
+ > libc - Missing
+   >> Didn't find:   libc package; please install it.
+   >> Try: "sudo apt-get install libc6", if you have sudo rights.
+ > libc-debug - Missing
+   >> Didn't find:   libc debug package; please install it.
+   >> Try: "sudo apt-get install libc6-dbg", if you have sudo rights.
+ > libdb-dev - OK
+ > libexpat-dev - OK
+ > libpcap-dev - OK
+ > libssl-dev - OK
+ > lksctp-dev - OK
+ > pygoocanvas - Missing
+   >> The pygoocanvas is not installed, try to install it.
+   >> Try: "sudo apt-get install python-pygoocanvas", if you have sudo rights.
+ > pygraphviz - Missing
+   >> The pygraphviz is not installed, try to install it.
+   >> Try: "sudo apt-get install python-pygraphviz", if you have sudo rights.
+ > python-dev - Missing
+   >> The python-dev is not installed, try to install it.
+   >> Try: "sudo apt-get install python-dev", if you have sudo rights.
+ > qt - Missing
+   >> Didn't find: Qt (version 4 or 5); install it from packages, or download from https://info.qt.io/download-qt-for-application-development
+   >> Try: "sudo apt-get install qt5-dev-tools libqt5-dev", if you have sudo rights.
+ > setuptools - Missing
+   >> The python-setuptools package is not installed, try to install it.
+   >> Try: "sudo apt-get install python-setuptools", if you have sudo rights.

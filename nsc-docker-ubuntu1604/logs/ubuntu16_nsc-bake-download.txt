@@ -1,0 +1,273 @@
+ >> Searching for system dependency pygobject - ()
+ >> Search pygobject - OK
+ >> Searching for system dependency pygraphviz - ()
+()
+ >> Dependency  pygraphviz - Problem
+    Module: "pygraphviz" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "pygraphviz"
+    More information from the module: "The pygraphviz is not installed, try to install it."
+ > Problem: Optional dependency, module "pygraphviz" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "pygraphviz" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency python-dev - ()
+ >> Search python-dev - OK
+ >> Searching for system dependency libxml2-dev - ()
+ >> Search libxml2-dev - OK
+ >> Searching for system dependency llvm-dev - ()
+ >> Search llvm-dev - OK
+ >> Searching for system dependency clang-dev - ()
+ >> Search clang-dev - OK
+ >> Downloading click-ns-3.25 - Initialized empty Git repository in /home/ns3nsc/ns3-nsc/bake/source/tmpHPCTyx/.git/
+From git://github.com/kohler/click
+ * [new branch]      bytenotifier -> origin/bytenotifier
+ * [new branch]      clickfs    -> origin/clickfs
+ * [new branch]      consecutive-bypass -> origin/consecutive-bypass
+ * [new branch]      foo        -> origin/foo
+ * [new branch]      master     -> origin/master
+ * [new branch]      netmap     -> origin/netmap
+ * [new branch]      nswork     -> origin/nswork
+ * [new branch]      pending-cleanup-race -> origin/pending-cleanup-race
+ * [new branch]      rcunote    -> origin/rcunote
+ * [new branch]      rcunote2   -> origin/rcunote2
+ * [new branch]      threading  -> origin/threading
+ * [new branch]      travis     -> origin/travis
+ * [new branch]      v2.0-release -> origin/v2.0-release
+ * [new tag]         v2.0.1     -> v2.0.1
+ * [new tag]         ACIRI_1101 -> ACIRI_1101
+ * [new tag]         FINAL_IMW02 -> FINAL_IMW02
+ * [new tag]         PURE       -> PURE
+ * [new tag]         RELEASE_1_0_2 -> RELEASE_1_0_2
+ * [new tag]         RELEASE_1_0_5 -> RELEASE_1_0_5
+ * [new tag]         RELEASE_1_1 -> RELEASE_1_1
+ * [new tag]         RELEASE_1_2_0 -> RELEASE_1_2_0
+ * [new tag]         RELEASE_1_2_1 -> RELEASE_1_2_1
+ * [new tag]         RELEASE_1_2_2 -> RELEASE_1_2_2
+ * [new tag]         RELEASE_1_2_3 -> RELEASE_1_2_3
+ * [new tag]         RELEASE_1_2_4 -> RELEASE_1_2_4
+ * [new tag]         RELEASE_1_3pre1 -> RELEASE_1_3pre1
+ * [new tag]         RELEASE_1_4 -> RELEASE_1_4
+ * [new tag]         RELEASE_1_4_1 -> RELEASE_1_4_1
+ * [new tag]         RELEASE_1_4_2 -> RELEASE_1_4_2
+ * [new tag]         RELEASE_1_4pre1 -> RELEASE_1_4pre1
+ * [new tag]         RELEASE_1_5_0 -> RELEASE_1_5_0
+ * [new tag]         RELEASE_1_6_0 -> RELEASE_1_6_0
+ * [new tag]         SIGCOMM_SUBMISSION -> SIGCOMM_SUBMISSION
+ * [new tag]         click_smp_merge_0 -> click_smp_merge_0
+ * [new tag]         click_smp_merge_1 -> click_smp_merge_1
+ * [new tag]         click_smp_merge_10 -> click_smp_merge_10
+ * [new tag]         click_smp_merge_2 -> click_smp_merge_2
+ * [new tag]         click_smp_merge_3 -> click_smp_merge_3
+ * [new tag]         click_smp_merge_4 -> click_smp_merge_4
+ * [new tag]         click_smp_merge_5 -> click_smp_merge_5
+ * [new tag]         click_smp_merge_6 -> click_smp_merge_6
+ * [new tag]         click_smp_merge_7 -> click_smp_merge_7
+ * [new tag]         click_smp_merge_9 -> click_smp_merge_9
+ * [new tag]         click_smp_merge_pre_routerthread -> click_smp_merge_pre_routerthread
+ * [new tag]         grid-15-jan-2002 -> grid-15-jan-2002
+ * [new tag]         grid_28_may_2002 -> grid_28_may_2002
+ * [new tag]         grid_mobicom_submission -> grid_mobicom_submission
+ * [new tag]         grid_stable_1 -> grid_stable_1
+ * [new tag]         mobicom03_final -> mobicom03_final
+ * [new tag]         r1_0_2     -> r1_0_2
+ * [new tag]         r1_0_5     -> r1_0_5
+ * [new tag]         v1.7.0rc1  -> v1.7.0rc1
+ * [new tag]         v1.8.0     -> v1.8.0
+ * [new tag]         v2.0       -> v2.0
+Note: checking out '5399eabf704f041c9cd8fc5d932c1e77bc9526de'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 5399eab... Merge pull request #218 from tbarbette/PRClickDPDKTestUpdate
+()
+ git init dir=/home/ns3nsc/ns3-nsc/bake/source/tmpHPCTyx
+ git remote add origin git://github.com/kohler/click.git dir=/home/ns3nsc/ns3-nsc/bake/source/tmpHPCTyx
+ git fetch dir=/home/ns3nsc/ns3-nsc/bake/source/tmpHPCTyx
+ git checkout 5399eabf704f041c9cd8fc5d932c1e77bc9526de dir=/home/ns3nsc/ns3-nsc/bake/source/tmpHPCTyx
+()
+ >> Download click-ns-3.25 - OK
+ >> Searching for system dependency qt - ()
+()
+ >> Dependency  qt - Problem
+    Module: "qt" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "qt"
+    More information from the module: "Didn't find: Qt (version 4 or 5); install it from packages, or download from https://info.qt.io/download-qt-for-application-development"
+ > Problem: Optional dependency, module "qt" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "qt" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Downloading nsc-0.5.3 - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 308 changesets with 17626 changes to 15176 files
+10621 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U https://code.nsnam.org/index.cgi/nsc /home/ns3nsc/ns3-nsc/bake/source/nsc-0.5.3 dir=None
+ hg update -r 08c391d0660a dir=/home/ns3nsc/ns3-nsc/bake/source/nsc-0.5.3
+()
+ >> Download nsc-0.5.3 - OK
+ >> Searching for system dependency g++ - ()
+ >> Search g++ - OK
+ >> Searching for system dependency cxxfilt - ()
+()
+ >> Dependency  cxxfilt - Problem
+    Module: "cxxfilt" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "cxxfilt"
+    More information from the module: "The python cxxfilt package is not installed, try to install it using 'pip install cxxfilt'."
+ > Problem: Optional dependency, module "cxxfilt" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "cxxfilt" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency setuptools - ()
+ >> Search setuptools - OK
+ >> Searching for system dependency libgoocanvas2 - ()
+()
+ >> Dependency  libgoocanvas2 - Problem
+    Module: "libgoocanvas2" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "libgoocanvas2"
+    More information from the module: "GooCanvas2 support missing from system."
+ > Problem: Optional dependency, module "libgoocanvas2" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "libgoocanvas2" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency gi-cairo - ()
+()
+ >> Dependency  gi-cairo - Problem
+    Module: "gi-cairo" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "gi-cairo"
+    More information from the module: "Python gobject components missing from system."
+ > Problem: Optional dependency, module "gi-cairo" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "gi-cairo" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Downloading BRITE - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 14 changesets with 239 changes to 78 files
+75 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/BRITE /home/ns3nsc/ns3-nsc/bake/source/BRITE dir=None
+ hg update -r tip dir=/home/ns3nsc/ns3-nsc/bake/source/BRITE
+()
+ >> Download BRITE - OK
+ >> Searching for system dependency automake - ()
+ >> Search automake - OK
+ >> Searching for system dependency cmake - ()
+ >> Search cmake - OK
+ >> Downloading castxml-0.1+git98a626ec - Initialized empty Git repository in /home/ns3nsc/ns3-nsc/bake/source/tmpibBOZ3/.git/
+From https://github.com/CastXML/CastXML
+ * [new branch]      master     -> origin/master
+Note: checking out '98a626ecb1aa522ca4f2575aeddc4ca3bb8c76db'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 98a626e... castxml: Process arguments before initializing LLVM targets
+()
+ git init dir=/home/ns3nsc/ns3-nsc/bake/source/tmpibBOZ3
+ git remote add origin https://github.com/CastXML/CastXML.git dir=/home/ns3nsc/ns3-nsc/bake/source/tmpibBOZ3
+ git fetch dir=/home/ns3nsc/ns3-nsc/bake/source/tmpibBOZ3
+ git checkout 98a626ecb1aa522ca4f2575aeddc4ca3bb8c76db dir=/home/ns3nsc/ns3-nsc/bake/source/tmpibBOZ3
+()
+ >> Download castxml-0.1+git98a626ec - OK
+ >> Downloading openflow-ns-3.25 - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 4 changesets with 1032 changes to 1014 files
+919 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/openflow /home/ns3nsc/ns3-nsc/bake/source/openflow-ns-3.25 dir=None
+ hg update -r 4db95a8ea718 dir=/home/ns3nsc/ns3-nsc/bake/source/openflow-ns-3.25
+()
+ >> Download openflow-ns-3.25 - OK
+ >> Downloading pybindgen-0.19.0.post4+ng823d8b2 (target directory:pybindgen) - Initialized empty Git repository in /home/ns3nsc/ns3-nsc/bake/source/tmpOQE2B1/.git/
+From https://github.com/gjcarneiro/pybindgen
+ * [new branch]      master     -> origin/master
+ * [new branch]      tomhenderson-castxml -> origin/tomhenderson-castxml
+ * [new tag]         0.1.1      -> 0.1.1
+ * [new tag]         0.1.2      -> 0.1.2
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.14.1     -> 0.14.1
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.19.0     -> 0.19.0
+ * [new tag]         0.2.0      -> 0.2.0
+ * [new tag]         0.3.0      -> 0.3.0
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.9.0      -> 0.9.0
+Note: checking out '823d8b2'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 823d8b2... Merge pull request #17 from TommyPec/master
+()
+ git init dir=/home/ns3nsc/ns3-nsc/bake/source/tmpOQE2B1
+ git remote add origin https://github.com/gjcarneiro/pybindgen.git dir=/home/ns3nsc/ns3-nsc/bake/source/tmpOQE2B1
+ git fetch dir=/home/ns3nsc/ns3-nsc/bake/source/tmpOQE2B1
+ git checkout 823d8b2 dir=/home/ns3nsc/ns3-nsc/bake/source/tmpOQE2B1
+()
+ >> Download pybindgen-0.19.0.post4+ng823d8b2 - OK
+ >> Downloading netanim-3.108 - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 305 changesets with 1609 changes to 228 files
+195 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/netanim /home/ns3nsc/ns3-nsc/bake/source/netanim-3.108 dir=None
+ hg update -r netanim-3.108 dir=/home/ns3nsc/ns3-nsc/bake/source/netanim-3.108
+()
+ >> Download netanim-3.108 - OK
+ >> Downloading pygccxml-1.9.1 - ()
+ tar zxf /home/ns3nsc/ns3-nsc/bake/source/v1.9.1.tar.gz dir=/home/ns3nsc/ns3-nsc/bake/source/tmp6_P4PY
+()
+ >> Download pygccxml-1.9.1 - OK
+ >> Downloading ns-3.29 - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 13778 changesets with 66626 changes to 7933 files
+3404 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/ns-3.29 /home/ns3nsc/ns3-nsc/bake/source/ns-3.29 dir=None
+ hg update -r ns-3.29 dir=/home/ns3nsc/ns3-nsc/bake/source/ns-3.29
+()
+ >> Download ns-3.29 - OK

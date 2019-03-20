@@ -1,0 +1,396 @@
+ >> Searching for system dependency flex - ()
+ >> Search flex - OK
+ >> Searching for system dependency bison - ()
+ >> Search bison - OK
+ >> Searching for system dependency libdb-dev - ()
+ >> Search libdb-dev - OK
+ >> Downloading iperf - ()
+ tar zxf /home/ns3dce/dce-linux-dev/source/iperf-2.0.5.tar.gz dir=/home/ns3dce/dce-linux-dev/source/tmpcACS32
+()
+ >> Download iperf - OK
+ >> Searching for system dependency libexpat-dev - ()
+ >> Search libexpat-dev - OK
+ >> Searching for system dependency libpcap-dev - ()
+ >> Search libpcap-dev - OK
+ >> Downloading bash - ()
+ tar zxf /home/ns3dce/dce-linux-dev/source/bash-4.1.tar.gz dir=/home/ns3dce/dce-linux-dev/source/tmpSRlDZR
+()
+ >> Download bash - OK
+ >> Downloading thttpd - ()
+ tar zxf /home/ns3dce/dce-linux-dev/source/thttpd-2.25b.tar.gz dir=/home/ns3dce/dce-linux-dev/source/tmpA4GzG_
+()
+ >> Download thttpd - OK
+ >> Downloading wget - ()
+ tar zxf /home/ns3dce/dce-linux-dev/source/wget-1.15.tar.gz dir=/home/ns3dce/dce-linux-dev/source/tmpMhJYLv
+()
+ >> Download wget - OK
+ >> Searching for system dependency lksctp-dev - ()
+ >> Search lksctp-dev - OK
+ >> Searching for system dependency libssl-dev - ()
+ >> Search libssl-dev - OK
+ >> Searching for system dependency pygobject - ()
+()
+ >> Dependency  pygobject - Problem
+    Module: "pygobject" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "pygobject"
+    More information from the module: "Python gobject components missing from system."
+ > Problem: Optional dependency, module "pygobject" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "pygobject" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency pygraphviz - ()
+()
+ >> Dependency  pygraphviz - Problem
+    Module: "pygraphviz" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "pygraphviz"
+    More information from the module: "The pygraphviz is not installed, try to install it."
+ > Problem: Optional dependency, module "pygraphviz" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "pygraphviz" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency python-dev - ()
+()
+ >> Dependency  python-dev - Problem
+    Module: "python-dev" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "python-dev"
+    More information from the module: "The python-dev is not installed, try to install it."
+ > Problem: Optional dependency, module "python-dev" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "python-dev" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency bc - ()
+ >> Search bc - OK
+ >> Searching for system dependency libc - ()
+()
+ >> Dependency  libc - Problem
+    Module: "libc" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "libc"
+    More information from the module: "Didn't find:   libc package; please install it."
+ > Problem: Optional dependency, module "libc" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "libc" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency qt - ()
+()
+ >> Dependency  qt - Problem
+    Module: "qt" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "qt"
+    More information from the module: "Didn't find: Qt (version 4 or 5); install it from packages, or download from https://info.qt.io/download-qt-for-application-development"
+ > Problem: Optional dependency, module "qt" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "qt" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency g++ - ()
+ >> Search g++ - OK
+ >> Searching for system dependency setuptools - ()
+()
+ >> Dependency  setuptools - Problem
+    Module: "setuptools" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "setuptools"
+    More information from the module: "The python-setuptools package is not installed, try to install it."
+ > Problem: Optional dependency, module "setuptools" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "setuptools" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency libgoocanvas2 - ()
+()
+ >> Dependency  libgoocanvas2 - Problem
+    Module: "libgoocanvas2" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "libgoocanvas2"
+    More information from the module: "GooCanvas2 support missing from system."
+ > Problem: Optional dependency, module "libgoocanvas2" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "libgoocanvas2" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Searching for system dependency gi-cairo - ()
+()
+ >> Dependency  gi-cairo - Problem
+    Module: "gi-cairo" is required by other modules but it is not available on your system.
+     Ask your system admin or review your library database to add "gi-cairo"
+    More information from the module: "Python gobject components missing from system."
+ > Problem: Optional dependency, module "gi-cairo" not available
+   This may reduce the  functionality of the final build. 
+   However, bake will continue since "gi-cairo" is not an essential dependency.
+   For more information call bake with -v or -vvv, for full verbose mode.
+
+ >> Downloading libaspect - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 38 changesets with 126 changes to 33 files
+29 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/thehajime/libaspect /home/ns3dce/dce-linux-dev/source/libaspect dir=None
+ hg update -r tip dir=/home/ns3dce/dce-linux-dev/source/libaspect
+()
+ >> Download libaspect - OK
+ >> Downloading ccnx - ()
+ tar zxf /home/ns3dce/dce-linux-dev/source/ccnx-0.6.2.tar.gz dir=/home/ns3dce/dce-linux-dev/source/tmpm67N0A
+()
+ >> Download ccnx - OK
+ >> Downloading net-next-nuse-4.4.0 (target directory:net-next-nuse-4.4.0) - Initialized empty Git repository in /home/ns3dce/dce-linux-dev/source/tmpOwZTRi/.git/
+From https://github.com/libos-nuse/net-next-nuse
+ * [new branch]      for-asm-upstream -> origin/for-asm-upstream
+ * [new branch]      for-asm-upstream-v3 -> origin/for-asm-upstream-v3
+ * [new branch]      for-linus-upstream-libos-v4 -> origin/for-linus-upstream-libos-v4
+ * [new branch]      for-linus-upstream-libos-v5 -> origin/for-linus-upstream-libos-v5
+ * [new branch]      for-linus-upstream-libos-v6 -> origin/for-linus-upstream-libos-v6
+ * [new branch]      libos-native-app -> origin/libos-native-app
+ * [new branch]      master     -> origin/master
+ * [new branch]      mptcp_trunk_libos -> origin/mptcp_trunk_libos
+ * [new branch]      nuse       -> origin/nuse
+ * [new branch]      nuse-xmit-more -> origin/nuse-xmit-more
+ * [new branch]      rump-hypcall -> origin/rump-hypcall
+ * [new branch]      v6-paolo-patch -> origin/v6-paolo-patch
+ * [new tag]         asm-generic-for-linus -> asm-generic-for-linus
+ * [new tag]         asm-upstream-150303 -> asm-upstream-150303
+ * [new tag]         libos-v4.1 -> libos-v4.1
+ * [new tag]         libos-v4.4 -> libos-v4.4
+ * [new tag]         rfc_libos_v1_150324 -> rfc_libos_v1_150324
+ * [new tag]         rfc_libos_v2_150417 -> rfc_libos_v2_150417
+ * [new tag]         rfc_libos_v3_150419 -> rfc_libos_v3_150419
+ * [new tag]         rfc_libos_v4_150427 -> rfc_libos_v4_150427
+Note: checking out 'libos-v4.4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 2625985... Merge tag 'v4.4'
+()
+ git init dir=/home/ns3dce/dce-linux-dev/source/tmpOwZTRi
+ git remote add origin https://github.com/libos-nuse/net-next-nuse.git dir=/home/ns3dce/dce-linux-dev/source/tmpOwZTRi
+ git fetch dir=/home/ns3dce/dce-linux-dev/source/tmpOwZTRi
+ git checkout libos-v4.4 dir=/home/ns3dce/dce-linux-dev/source/tmpOwZTRi
+()
+ >> Download net-next-nuse-4.4.0 - OK
+ >> Downloading iproute2-4.4.0 (target directory:iproute2-4.4.0) - Initialized empty Git repository in /home/ns3dce/dce-linux-dev/source/tmpq0Wy7y/.git/
+From https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2
+ * [new branch]      flag-names -> origin/flag-names
+ * [new branch]      iproute2-4.1.x -> origin/iproute2-4.1.x
+ * [new branch]      master     -> origin/master
+ * [new branch]      net-next   -> origin/net-next
+ * [new tag]         v4.1.1     -> v4.1.1
+ * [new tag]         ss-050808  -> ss-050808
+ * [new tag]         ss-050816  -> ss-050816
+ * [new tag]         ss-050901  -> ss-050901
+ * [new tag]         ss-050929  -> ss-050929
+ * [new tag]         ss-051006  -> ss-051006
+ * [new tag]         ss-051007  -> ss-051007
+ * [new tag]         ss-051101  -> ss-051101
+ * [new tag]         ss-051107  -> ss-051107
+ * [new tag]         ss-060110  -> ss-060110
+ * [new tag]         ss-060314  -> ss-060314
+ * [new tag]         ss-060323  -> ss-060323
+ * [new tag]         ss050607   -> ss050607
+ * [new tag]         v2.6.19-061214 -> v2.6.19-061214
+ * [new tag]         v2.6.23-071016 -> v2.6.23-071016
+ * [new tag]         v2.6.24-rc4 -> v2.6.24-rc4
+ * [new tag]         v2.6.24-rc6 -> v2.6.24-rc6
+ * [new tag]         v2.6.24-rc7 -> v2.6.24-rc7
+ * [new tag]         v2.6.25    -> v2.6.25
+ * [new tag]         v2.6.26    -> v2.6.26
+ * [new tag]         v2.6.27    -> v2.6.27
+ * [new tag]         v2.6.28    -> v2.6.28
+ * [new tag]         v2.6.29    -> v2.6.29
+ * [new tag]         v2.6.29-1  -> v2.6.29-1
+ * [new tag]         v2.6.31    -> v2.6.31
+ * [new tag]         v2.6.33    -> v2.6.33
+ * [new tag]         v2.6.34    -> v2.6.34
+ * [new tag]         v2.6.35    -> v2.6.35
+ * [new tag]         v2.6.35.1  -> v2.6.35.1
+ * [new tag]         v2.6.37    -> v2.6.37
+ * [new tag]         v2.6.38    -> v2.6.38
+ * [new tag]         v2.6.39    -> v2.6.39
+ * [new tag]         v2_6_10-050124 -> v2_6_10-050124
+ * [new tag]         v2_6_10-050207 -> v2_6_10-050207
+ * [new tag]         v2_6_10-050209 -> v2_6_10-050209
+ * [new tag]         v2_6_11-050310 -> v2_6_11-050310
+ * [new tag]         v2_6_11-050314 -> v2_6_11-050314
+ * [new tag]         v2_6_11-050318 -> v2_6_11-050318
+ * [new tag]         v2_6_11-050330 -> v2_6_11-050330
+ * [new tag]         v2_6_7-040701 -> v2_6_7-040701
+ * [new tag]         v2_6_7-040702 -> v2_6_7-040702
+ * [new tag]         v2_6_7-ss040608 -> v2_6_7-ss040608
+ * [new tag]         v2_6_8-040730 -> v2_6_8-040730
+ * [new tag]         v2_6_8-040813-jamal -> v2_6_8-040813-jamal
+ * [new tag]         v2_6_8-040823 -> v2_6_8-040823
+ * [new tag]         v2_6_8-ss040831 -> v2_6_8-ss040831
+ * [new tag]         v2_6_9-041019 -> v2_6_9-041019
+ * [new tag]         v2_6_9-jamal -> v2_6_9-jamal
+ * [new tag]         v2_6_9-ss040831 -> v2_6_9-ss040831
+ * [new tag]         v3.0.0     -> v3.0.0
+ * [new tag]         v3.1.0     -> v3.1.0
+ * [new tag]         v3.10.0    -> v3.10.0
+ * [new tag]         v3.11.0    -> v3.11.0
+ * [new tag]         v3.12.0    -> v3.12.0
+ * [new tag]         v3.14.0    -> v3.14.0
+ * [new tag]         v3.15.0    -> v3.15.0
+ * [new tag]         v3.16.0    -> v3.16.0
+ * [new tag]         v3.17.0    -> v3.17.0
+ * [new tag]         v3.18.0    -> v3.18.0
+ * [new tag]         v3.19.0    -> v3.19.0
+ * [new tag]         v3.2.0     -> v3.2.0
+ * [new tag]         v3.3.0     -> v3.3.0
+ * [new tag]         v3.4.0     -> v3.4.0
+ * [new tag]         v3.5.0     -> v3.5.0
+ * [new tag]         v3.6.0     -> v3.6.0
+ * [new tag]         v3.7.0     -> v3.7.0
+ * [new tag]         v3.8.0     -> v3.8.0
+ * [new tag]         v3.9.0     -> v3.9.0
+ * [new tag]         v4.0.0     -> v4.0.0
+ * [new tag]         v4.1.0     -> v4.1.0
+ * [new tag]         v4.10.0    -> v4.10.0
+ * [new tag]         v4.11.0    -> v4.11.0
+ * [new tag]         v4.12.0    -> v4.12.0
+ * [new tag]         v4.13.0    -> v4.13.0
+ * [new tag]         v4.14.0    -> v4.14.0
+ * [new tag]         v4.14.1    -> v4.14.1
+ * [new tag]         v4.15.0    -> v4.15.0
+ * [new tag]         v4.16.0    -> v4.16.0
+ * [new tag]         v4.17.0    -> v4.17.0
+ * [new tag]         v4.18.0    -> v4.18.0
+ * [new tag]         v4.19.0    -> v4.19.0
+ * [new tag]         v4.2.0     -> v4.2.0
+ * [new tag]         v4.20.0    -> v4.20.0
+ * [new tag]         v4.3.0     -> v4.3.0
+ * [new tag]         v4.4.0     -> v4.4.0
+ * [new tag]         v4.5.0     -> v4.5.0
+ * [new tag]         v4.6.0     -> v4.6.0
+ * [new tag]         v4.7.0     -> v4.7.0
+ * [new tag]         v4.8.0     -> v4.8.0
+ * [new tag]         v4.9.0     -> v4.9.0
+ * [new tag]         v5.0.0     -> v5.0.0
+Note: checking out 'v4.4.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 92a0236... v4.4.0
+()
+ git init dir=/home/ns3dce/dce-linux-dev/source/tmpq0Wy7y
+ git remote add origin https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git dir=/home/ns3dce/dce-linux-dev/source/tmpq0Wy7y
+ git fetch dir=/home/ns3dce/dce-linux-dev/source/tmpq0Wy7y
+ git checkout v4.4.0 dir=/home/ns3dce/dce-linux-dev/source/tmpq0Wy7y
+()
+ >> Download iproute2-4.4.0 - OK
+ >> Downloading pybindgen - Initialized empty Git repository in /home/ns3dce/dce-linux-dev/source/tmpPXjs3_/.git/
+From https://github.com/gjcarneiro/pybindgen
+ * [new branch]      master     -> origin/master
+ * [new branch]      tomhenderson-castxml -> origin/tomhenderson-castxml
+ * [new tag]         0.1.1      -> 0.1.1
+ * [new tag]         0.1.2      -> 0.1.2
+ * [new tag]         0.10.0     -> 0.10.0
+ * [new tag]         0.11.0     -> 0.11.0
+ * [new tag]         0.12.0     -> 0.12.0
+ * [new tag]         0.13.0     -> 0.13.0
+ * [new tag]         0.14.0     -> 0.14.0
+ * [new tag]         0.14.1     -> 0.14.1
+ * [new tag]         0.15.0     -> 0.15.0
+ * [new tag]         0.16.0     -> 0.16.0
+ * [new tag]         0.17.0     -> 0.17.0
+ * [new tag]         0.18.0     -> 0.18.0
+ * [new tag]         0.19.0     -> 0.19.0
+ * [new tag]         0.2.0      -> 0.2.0
+ * [new tag]         0.3.0      -> 0.3.0
+ * [new tag]         0.4.0      -> 0.4.0
+ * [new tag]         0.5.0      -> 0.5.0
+ * [new tag]         0.6.0      -> 0.6.0
+ * [new tag]         0.7.0      -> 0.7.0
+ * [new tag]         0.8.0      -> 0.8.0
+ * [new tag]         0.9.0      -> 0.9.0
+From https://github.com/gjcarneiro/pybindgen
+ * branch            master     -> FETCH_HEAD
+()
+ git init dir=/home/ns3dce/dce-linux-dev/source/tmpPXjs3_
+ git remote add origin https://github.com/gjcarneiro/pybindgen.git dir=/home/ns3dce/dce-linux-dev/source/tmpPXjs3_
+ git fetch dir=/home/ns3dce/dce-linux-dev/source/tmpPXjs3_
+ git pull origin master dir=/home/ns3dce/dce-linux-dev/source/tmpPXjs3_
+()
+ >> Download pybindgen - OK
+ >> Downloading netanim - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 305 changesets with 1609 changes to 228 files
+195 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/netanim /home/ns3dce/dce-linux-dev/source/netanim dir=None
+ hg update -r tip dir=/home/ns3dce/dce-linux-dev/source/netanim
+()
+ >> Download netanim - OK
+ >> Searching for system dependency libc-debug - ()
+ >> Search libc-debug - OK
+ >> Downloading ns-3-dev - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 13897 changesets with 67385 changes to 7956 files
+3427 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/ns-3-dev /home/ns3dce/dce-linux-dev/source/ns-3-dev dir=None
+ hg update -r tip dir=/home/ns3dce/dce-linux-dev/source/ns-3-dev
+()
+ >> Download ns-3-dev - OK
+ >> Downloading elf-loader - requesting all changes
+adding changesets
+adding manifests
+adding file changes
+added 665 changesets with 1667 changes to 248 files
+199 files updated, 0 files merged, 0 files removed, 0 files unresolved
+()
+ hg clone -U http://code.nsnam.org/thehajime/elf-loader /home/ns3dce/dce-linux-dev/source/elf-loader dir=None
+ hg update -r tip dir=/home/ns3dce/dce-linux-dev/source/elf-loader
+()
+ >> Download elf-loader - OK
+ >> Downloading dce-meta-dev (target directory:ns-3-dce) - Initialized empty Git repository in /home/ns3dce/dce-linux-dev/source/tmp3ThKSc/.git/
+From git://github.com/direct-code-execution/ns-3-dce
+ * [new branch]      master     -> origin/master
+ * [new branch]      revert-33-remove_getcwd_warning -> origin/revert-33-remove_getcwd_warning
+ * [new tag]         NS3.11     -> NS3.11
+ * [new tag]         after_ns3.11 -> after_ns3.11
+ * [new tag]         before_ns3.11 -> before_ns3.11
+ * [new tag]         dce-1.0    -> dce-1.0
+ * [new tag]         dce-1.0-rc1 -> dce-1.0-rc1
+ * [new tag]         dce-1.1    -> dce-1.1
+ * [new tag]         dce-1.10   -> dce-1.10
+ * [new tag]         dce-1.2    -> dce-1.2
+ * [new tag]         dce-1.3    -> dce-1.3
+ * [new tag]         dce-1.4    -> dce-1.4
+ * [new tag]         dce-1.5    -> dce-1.5
+ * [new tag]         dce-1.6    -> dce-1.6
+ * [new tag]         dce-1.7    -> dce-1.7
+ * [new tag]         dce-1.8    -> dce-1.8
+ * [new tag]         dce-1.9    -> dce-1.9
+From git://github.com/direct-code-execution/ns-3-dce
+ * branch            master     -> FETCH_HEAD
+()
+ git init dir=/home/ns3dce/dce-linux-dev/source/tmp3ThKSc
+ git remote add origin git://github.com/direct-code-execution/ns-3-dce dir=/home/ns3dce/dce-linux-dev/source/tmp3ThKSc
+ git fetch dir=/home/ns3dce/dce-linux-dev/source/tmp3ThKSc
+ git pull origin master dir=/home/ns3dce/dce-linux-dev/source/tmp3ThKSc
+()
+ >> Download dce-meta-dev - OK
+ >> Downloading dce-linux-dev (target directory:ns-3-dce) - ()
+  >>> No actions needed, the source directory for dce-linux-dev already exists.
+      If you want to update the module, use update instead download, or, if you want a fresh copy,
+      either remove it from the source directory, or use the --force_download option.()
+ >> Download dce-linux-dev - OK

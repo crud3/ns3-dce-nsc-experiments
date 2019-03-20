@@ -1,0 +1,134 @@
+module: flex (enabled)
+  No dependencies!
+module: bison (enabled)
+  No dependencies!
+module: libdb-dev (enabled)
+  No dependencies!
+module: iperf (enabled)
+  No dependencies!
+module: libexpat-dev (enabled)
+  No dependencies!
+module: libpcap-dev (enabled)
+  No dependencies!
+module: bash (enabled)
+  No dependencies!
+module: thttpd (enabled)
+  No dependencies!
+module: wget (enabled)
+  No dependencies!
+module: lksctp-dev (enabled)
+  No dependencies!
+module: libssl-dev (enabled)
+  No dependencies!
+module: pygobject (enabled)
+  No dependencies!
+module: pygraphviz (enabled)
+  No dependencies!
+module: python-dev (enabled)
+  No dependencies!
+module: bc (enabled)
+  No dependencies!
+module: libc (enabled)
+  No dependencies!
+module: qt (enabled)
+  No dependencies!
+module: g++ (enabled)
+  No dependencies!
+module: setuptools (enabled)
+  No dependencies!
+module: libgoocanvas2 (enabled)
+  No dependencies!
+module: gi-cairo (enabled)
+  No dependencies!
+module: libaspect (enabled)
+  No dependencies!
+module: ccnx (enabled)
+  depends on:
+     libpcap-dev (optional:False)
+     libexpat-dev (optional:False)
+module: net-next-nuse-4.4.0 (enabled)
+  depends on:
+     bc (optional:False)
+module: iproute2-4.4.0 (enabled)
+  depends on:
+     libdb-dev (optional:False)
+     bison (optional:False)
+     flex (optional:False)
+     libssl-dev (optional:False)
+module: pybindgen (enabled)
+  depends on:
+     python-dev (optional:True)
+     setuptools (optional:False)
+module: pyviz-gtk3-prerequisites (enabled)
+  depends on:
+     python-dev (optional:True)
+     pygraphviz (optional:True)
+     pygobject (optional:True)
+     gi-cairo (optional:True)
+     libgoocanvas2 (optional:True)
+module: netanim (enabled)
+  depends on:
+     qt (optional:False)
+     g++ (optional:False)
+module: libc-debug (enabled)
+  depends on:
+     libc (optional:False)
+module: ns-3-dev (enabled)
+  depends on:
+     netanim (optional:True)
+     pybindgen (optional:True)
+     pyviz-gtk3-prerequisites (optional:True)
+module: elf-loader (enabled)
+  depends on:
+     libc-debug (optional:False)
+module: dce-meta-dev (enabled)
+  depends on:
+     ns-3-dev (optional:False)
+     elf-loader (optional:True)
+     libaspect (optional:True)
+     iperf (optional:True)
+     ccnx (optional:True)
+     wget (optional:True)
+     thttpd (optional:True)
+     bash (optional:True)
+module: dce-linux-dev (enabled)
+  depends on:
+     dce-meta-dev (optional:False)
+     net-next-nuse-4.4.0 (optional:False)
+     iproute2-4.4.0 (optional:False)
+     lksctp-dev (optional:True)
+
+-- System Dependencies --
+ > bc - OK
+ > bison - OK
+ > flex - OK
+ > g++ - OK
+ > gi-cairo - Missing
+   >> Python gobject components missing from system.
+   >> Try: "sudo apt-get install python-gi-cairo", if you have sudo rights.
+ > libc - Missing
+   >> Didn't find:   libc package; please install it.
+   >> Try: "sudo apt-get install libc6", if you have sudo rights.
+ > libc-debug - OK
+ > libdb-dev - OK
+ > libexpat-dev - OK
+ > libgoocanvas2 - Missing
+   >> GooCanvas2 support missing from system.
+   >> Try: "sudo apt-get install gir1.2-goocanvas-2.0", if you have sudo rights.
+ > libpcap-dev - OK
+ > libssl-dev - OK
+ > lksctp-dev - OK
+ > pygobject - Missing
+   >> Python gobject components missing from system.
+   >> Try: "sudo apt-get install python-gi", if you have sudo rights.
+ > pygraphviz - Missing
+   >> The pygraphviz is not installed, try to install it.
+   >> Try: "sudo apt-get install python-pygraphviz", if you have sudo rights.
+ > python-dev - Missing
+   >> The python-dev is not installed, try to install it.
+   >> Try: "sudo apt-get install python-dev", if you have sudo rights.
+ > qt - Missing
+   >> Didn't find: Qt (version 4 or 5); install it from packages, or download from https://info.qt.io/download-qt-for-application-development
+   >> Try: "sudo apt-get install qt5-dev-tools libqt5-dev", if you have sudo rights.
+ > setuptools - Missing
+   >> The python-setuptools package is not installed, try to install it.
