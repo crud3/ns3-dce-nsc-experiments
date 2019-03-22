@@ -19,8 +19,14 @@ WORKDIR /home/ns3nsc/
 
 ENV PATH /usr/lib/ccache:${PATH}
 
-RUN mkdir -p /home/ns3nsc/ns3-nsc
-WORKDIR /home/ns3nsc/ns3-nsc
+WORKDIR /home/ns3nsc/
 
-RUN hg clone https://secure.wand.net.nz/mercurial/nsc nsc-dev && cd nsc-dev
-#RUN python2 scons.py 2>&1 | tee ubuntu18_nsc-scons.txt
+# Building with scons does not work
+# RUN hg clone https://secure.wand.net.nz/mercurial/nsc nsc-dev && cd nsc-dev
+# RUN python2 scons.py 2>&1 | tee ubuntu18_nsc-scons.txt
+
+# Building NSC with bake
+RUN git clone https://gitlab.com/nsnam/bake.git && cd bake
+RUN ./bake/bake.py configure -e ns-allinone-3.29 -e nsc-0.5.3
+RUN ./bake/bake.py download -vvv 2>&1 | tee ubuntu18_nsc-download.txt && ./bake/bake.py show 2>&1 | tee ubuntu18_nsc-show.txt
+RUN ./bake/bake.py build -vvv 2>&1 | tee ubuntu18_nsc-build.txt

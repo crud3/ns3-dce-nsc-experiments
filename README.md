@@ -12,7 +12,7 @@ Build status:
 
 |         		| **DCE / net-next-nuse**           | **NSC**  |
 | ------------- 	|:-------------:| -----|
-| **Ubuntu 16.04**      | SUCCESS | FAIL |
+| **Ubuntu 16.04**      | SUCCESS | SUCCESS (with bake only) |
 | **Ubuntu 18.04**      | FAIL      |   FAIL |
 
 ## Documentation of experiments
@@ -61,6 +61,3 @@ sudo apt install cmake cvs git bzr unrar p7zip-full autoconf build-essential bis
   * `cxxfilt` -> `pip install cxxfilt`
   * `pygoocanvas` -> not available for Ubuntu bionic beaver, drawing stuff
   * `libc-debug` -> should be installed, unknown why it is shown as missing (`libclang-dev libc6-dbg`)
-## ns-3 + NSC
-
-TODO: add old documentation

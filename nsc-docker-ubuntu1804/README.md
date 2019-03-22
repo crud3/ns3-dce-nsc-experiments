@@ -3,7 +3,10 @@
 The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile  
 and  
 https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile  
-Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint). NSC is built using the SCONS build system. (TODO and maybe add building with bake). gcc-5 and g++-5 are installed and made default to build NSC.
+Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint).
+
+### Compiler versions
+Because building NSC requires gcc-5 and g++-5 are installed and made default. I have not yet found a reliable way to force scons to use gcc-5 when another gcc version is installed and set as default. Neither `CC=gcc-5 python2 scons.py` nor setting variables in the `custom.py` file which is read in `SConstruct` work. 
 
 ## Errors
 First build with scons (`python2 scons.py`) and gcc-7 yields the following error:
@@ -75,7 +78,7 @@ diff -r a/sim/num_stacks.h b/sim/num_stacks.h
 > #define NUM_STACKS 2000
 
 ```
-This error message can also be mitigated by enforcing usage of gcc version 5, because gcc-5 is recommended for NSC anyways.
+This error message can also be mitigated by enforcing usage of gcc version 5, because gcc-5 is recommended (probably necessary) for NSC anyways.
 
 After above changes (either using gcc-5 or changes to sources), building still fails with the following error:
 ```
@@ -105,7 +108,63 @@ collect2: error: ld returned 1 exit status
 scons: *** [globaliser/globaliser] Error 1
 scons: building terminated because of errors. 
 ```
-Checking the error message was not particularly helpful so far.  
+
+Whether one uses bake or scons directly does not matter for those errors.
+
+### Flex error
+The beforementioned ```libfl.so: undefined reference to `yylex'``` error may be caused by an issue in the flex library version installed for Ubuntu 18.04 (http://lists.linuxfromscratch.org/pipermail/blfs-support/2015-April/076525.html). The proposed fix (replacing `-lfl` with `/usr/lib/libfl.a`) can't be easily applied for NSC. A search for `-lfl` in the sources yields the following results:
+```
+grep -r "\-lfl" .
+Binary file ./source/nsc-0.5.3/.sconsign.dblite matches
+./source/nsc-0.5.3/config.log:  |/usr/bin/gcc-5 -o .sconf_temp/conftest_1 .sconf_temp/conftest_1.o -lfl
+
+```
+The `config.log` file has the following content:
+```
+file /home/crude/nsctest/source/nsc-0.5.3/SConstruct,line 154:
+    Configure(confdir = .sconf_temp)
+scons: Configure: Checking target architecure...
+scons: Configure: (cached) amd64, checking userland ...
+scons: Configure: ".sconf_temp/conftest_0.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_0.c <-
+  |  |int main(void)
+  |  |{return 0;}
+  |  |
+  |
+scons: Configure: ".sconf_temp/conftest_0.o" is up to date.
+scons: Configure: The original builder output was:
+  |/usr/bin/gcc-5 -o .sconf_temp/conftest_0.o -c .sconf_temp/conftest_0.c
+  |
+scons: Configure: (cached) amd64
+
+scons: Configure: Checking for C library fl... 
+scons: Configure: ".sconf_temp/conftest_1.c" is up to date.
+scons: Configure: The original builder output was:
+  |.sconf_temp/conftest_1.c <-
+  |  |
+  |  |
+  |  |
+  |  |int
+  |  |main() {
+  |  |  
+  |  |return 0;
+  |  |}
+  |  |
+  |
+scons: Configure: ".sconf_temp/conftest_1.o" is up to date.
+scons: Configure: The original builder output was:
+  |/usr/bin/gcc-5 -o .sconf_temp/conftest_1.o -c .sconf_temp/conftest_1.c
+  |
+scons: Configure: ".sconf_temp/conftest_1" is up to date.
+scons: Configure: The original builder output was:
+  |/usr/bin/gcc-5 -o .sconf_temp/conftest_1 .sconf_temp/conftest_1.o -lfl
+  |
+scons: Configure: (cached) yes
+```
+
+
+Other search results concerning this error message:  
 https://stackoverflow.com/questions/34782625/undefined-reference-to-yylex  
 https://github.com/sipcapture/captagent/issues/45
 
@@ -113,5 +172,3 @@ https://github.com/sipcapture/captagent/issues/45
 Failure to build NSC on Ubuntu 18.04.
 
 Further investigation and/or consult mailing list.
-
-Also try building with bake.

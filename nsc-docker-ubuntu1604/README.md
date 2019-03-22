@@ -3,10 +3,11 @@
 The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile  
 and  
 https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile  
-Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint). NSC is built using the SCONS build system. (TODO and maybe add building with bake). Ubuntu 16.04 already uses gcc-5, so no modifications to the gcc versions were made.
+Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint).  
+NSC is built using the SCONS build system, either directly or through bake. Ubuntu 16.04 already uses gcc-5, so no modifications to the gcc versions were necessary.
 
-## Errors
-Building with with scons (`python2 scons.py`) yields the following error:
+## Errors (using scons directly)
+Building directly with with scons (`python2 scons.py`) yields the following error:
 
 ```
 ...
@@ -31,8 +32,7 @@ scons: building terminated because of errors.
 
 
 ## Result
-Failure to build NSC on Ubuntu 16.04.
+Failure to build NSC on Ubuntu 16.04 with `python2 scons.py`.
 
-Further investigation and/or consult mailing list.
-
-Also try building with bake.
+Success when building NSC on Ubuntu 16.04 with bake. 
+`./test.py -s ns3-tcp-interoperability` succeeds.
