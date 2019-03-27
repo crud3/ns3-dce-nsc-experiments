@@ -22,16 +22,14 @@ WORKDIR /home/ns3dce/
 
 ENV PATH /usr/lib/ccache:${PATH}
 
-# Build ns3-dce with log files
-RUN mkdir -p /home/ns3dce/dce-linux-dev
-WORKDIR /home/ns3dce/dce-linux-dev
-
 # Use original bake instead of RUN git clone https://github.com/thehajime/bake
-RUN hg clone http://code.nsnam.org/bake
-RUN ./bake/bake.py configure -e dce-linux-dev
-# -e dce-umip-dev
-RUN ./bake/bake.py download -vvv 2>&1 | tee ubuntu16_dce-dev-download.txt && ./bake/bake.py show 2>&1 | tee ubuntu16_dce-dev-show.txt
+RUN git clone https://gitlab.com/nsnam/bake.git
 
-RUN ./bake/bake.py build -vvv 2>&1 | tee ubuntu16_dce-dev-build.txt
+RUN mkdir dce-linux-dev
+WORKDIR dce-linux-dev
 
-RUN cd source/ns-3-dce && ./test.py -vvv 2>&1 | tee ubuntu16_dce-test.txt
+RUN ./../bake/bake.py configure -e dce-linux-dev && ./../bake/bake.py download -vvv 2>&1 | tee ubuntu16_dce-dev-download.txt && ./../bake/bake.py show 2>&1 | tee ubuntu16_dce-dev-show.txt
+
+RUN ./../bake/bake.py build -vvv 2>&1 | tee ubuntu16_dce-dev-build.txt
+
+RUN cd source/ns-3-dce && ./test.py -vvv 2>&1 | tee ../../ubuntu16_dce-test.txt

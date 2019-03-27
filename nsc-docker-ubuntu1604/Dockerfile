@@ -17,14 +17,22 @@ WORKDIR /home/ns3nsc/
 
 ENV PATH /usr/lib/ccache:${PATH}
 
-WORKDIR /home/ns3nsc/
-
 # Building with scons does not work
 # RUN hg clone https://secure.wand.net.nz/mercurial/nsc nsc-dev && cd nsc-dev
 # RUN python2 scons.py 2>&1 | tee ubuntu16_nsc-scons.txt
 
 # Building NSC with bake
-RUN git clone https://gitlab.com/nsnam/bake.git && cd bake
-RUN ./bake/bake.py configure -e ns-allinone-3.29 -e nsc-0.5.3
-RUN ./bake/bake.py download -vvv 2>&1 | tee ubuntu16_nsc-download.txt && ./bake/bake.py show 2>&1 | tee ubuntu16_nsc-show.txt
-RUN ./bake/bake.py build -vvv 2>&1 | tee ubuntu16_nsc-build.txt
+RUN git clone https://gitlab.com/nsnam/bake.git && mkdir ns3-nsc
+WORKDIR ns3-nsc
+
+RUN ./../bake/bake.py configure -e nsc-dev && ./../bake/bake.py download -vvv 2>&1 | tee ubuntu16_nsc-download.txt \
+	&& ./../bake/bake.py show 2>&1 | tee ubuntu16_nsc-show.txt
+RUN ./../bake/bake.py build -vvv 2>&1 | tee ubuntu16_nsc-build.txt
+
+# Download nstor and test NSC
+RUN cd .. && git clone https://github.com/crud3/nstor.git
+#  && cd nstor && git checkout bump-ns-3.27
+WORKDIR /home/ns3nsc/nstor
+# This will fail at the moment.
+RUN ./waf clean ; CXXFLAGS="-Wall" ./waf configure --build-profile=debug --enable-examples --enable-tests --with-nsc=/home/ns3nsc/ns3-nsc/build/ && CXXFLAGS="-Wall" ./waf
+

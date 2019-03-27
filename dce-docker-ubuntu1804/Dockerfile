@@ -19,13 +19,11 @@ WORKDIR /home/ns3dce/
 
 ENV PATH /usr/lib/ccache:${PATH}
 
-RUN mkdir -p /home/ns3dce/dce-linux-dev
-WORKDIR /home/ns3dce/dce-linux-dev
 # Try original bake
-RUN hg clone http://code.nsnam.org/bake
+RUN git clone https://gitlab.com/nsnam/bake.git && mkdir dce-linux-dev
+WORKDIR dce-linux-dev
 
-RUN ./bake/bake.py configure -e dce-linux-dev
-# -e dce-umip-dev
-RUN ./bake/bake.py download -vvv 2>&1 | tee ubuntu18_dce-dev-download.txt && ./bake/bake.py show 2>&1 | tee ubuntu18_dce-dev-show.txt
-RUN ./bake/bake.py build -vvv 2>&1 | tee ubuntu18_dce-dev-build.txt
-RUN cd source/ns-3-dce && ./test.py -vvv 2>&1 | tee ubuntu18_dce-dev-test.txt
+RUN ./../bake/bake.py configure -e dce-linux-dev && ./../bake/bake.py download -vvv 2>&1 | tee ../ubuntu18_dce-dev-download.txt && ./../bake/bake.py show 2>&1 | tee ../ubuntu18_dce-dev-show.txt
+RUN ./../bake/bake.py build -vvv 2>&1 | tee ../ubuntu18_dce-dev-build.txt
+RUN cd source/ns-3-dce && ./test.py -vvv 2>&1 | tee ../../ubuntu18_dce-dev-test.txt
+# Only 3 out of 47 tests pass, further testing on local machine. Debugging glibc issues
