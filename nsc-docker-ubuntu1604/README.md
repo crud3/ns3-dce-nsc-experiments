@@ -36,3 +36,7 @@ Failure to build NSC on Ubuntu 16.04 with `python2 scons.py`.
 
 Success when building NSC on Ubuntu 16.04 with bake. 
 `./test.py -s ns3-tcp-interoperability` succeeds.
+
+### nstor with NSC on Ubuntu 16.04
+Building nstor fails because of https://github.com/crud3/nstor/issues/1  
+This is temporarily fixed by just deleting the `scratch/01-single-star-web/` folder, after which building nstor succeeds. The `tor-example` script can be run with NSC without errors.

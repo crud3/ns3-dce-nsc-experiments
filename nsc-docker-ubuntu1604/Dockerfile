@@ -29,10 +29,15 @@ RUN ./../bake/bake.py configure -e nsc-dev && ./../bake/bake.py download -vvv 2>
 	&& ./../bake/bake.py show 2>&1 | tee ubuntu16_nsc-show.txt
 RUN ./../bake/bake.py build -vvv 2>&1 | tee ubuntu16_nsc-build.txt
 
-# Download nstor and test NSC
-RUN cd .. && git clone https://github.com/crud3/nstor.git
-#  && cd nstor && git checkout bump-ns-3.27
+# Download nstor and test NSC functionality
+RUN cd .. && git clone https://github.com/crud3/nstor.git && cd nstor && git checkout bump-ns-3.27
 WORKDIR /home/ns3nsc/nstor
-# This will fail at the moment.
+
+# Because of https://github.com/crud3/nstor/issues/1, delete 01-single-star-web and just run tor-example
+RUN rm -rf scratch/01-single-star-web
 RUN ./waf clean ; CXXFLAGS="-Wall" ./waf configure --build-profile=debug --enable-examples --enable-tests --with-nsc=/home/ns3nsc/ns3-nsc/build/ && CXXFLAGS="-Wall" ./waf
+
+# time $command does not work in Dockerfile, but works when in a shell in the container
+# to execute manually: time ./waf --run "tor-example --use-nsc=true" | tee tor-example-nsc.txt
+RUN ./waf --run "tor-example --use-nsc=true" | tee tor-example-nsc.txt
 
