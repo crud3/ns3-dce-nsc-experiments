@@ -39,4 +39,4 @@ Success when building NSC on Ubuntu 16.04 with bake.
 
 ### nstor with NSC on Ubuntu 16.04
 Building nstor fails because of https://github.com/crud3/nstor/issues/1  
-This is temporarily fixed by just deleting the `scratch/01-single-star-web/` folder, after which building nstor succeeds. The `tor-example` script can be run with NSC without errors.
+This is temporarily fixed by just deleting the `scratch/01-single-star-web/` folder, after which building nstor succeeds. The `tor-example` script can be run with NSC without errors on all tags (nstor-ns-3.27, nstor-ns-3.28, nstor-ns-3.29) so I assume NSC itself and NSC in combination with nstor works correctly. The build failure may be due to compiler issues in the docker container. If it's really a problem with the `sim.cc` in nstor, the build process can be changed back to normal after a bugfix.
