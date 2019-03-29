@@ -2,8 +2,7 @@ FROM ubuntu:18.04
 
 # Adapted from https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile
 
-RUN apt-get update
-RUN apt-get install -y mercurial libexpat1-dev git-core build-essential bison \
+RUN apt-get update && apt-get install -y mercurial libexpat1-dev git-core build-essential bison \
     flex libssl-dev libdb-dev libpcap-dev libc6-dbg libsysfs-dev gawk indent \
     pkg-config autoconf automake sudo ccache libsaxonb-java openjdk-8-jre-headless bc wget && rm -rf /var/lib/apt/lists/*
 

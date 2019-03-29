@@ -22,6 +22,11 @@ Build status:
 [DCE on Ubuntu 18.04](dce-docker-ubuntu1804/)  
 [NSC on Ubuntu 18.04](nsc-docker-ubuntu1804/)  
 
+If one encounters an error akin to the one shown below when (re-)building a Docker image, the problem may be that the `apt-get update` command was not executed again and the cached version is outdated.
+```
+E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/ghostscript/libgs9-common_9.26~dfsg+0-0ubuntu0.18.04.7_all.deb  404  Not Found [IP: 91.189.88.152 80]
+```
+
 ## ns-3 + DCE
 DCE is the "successor" of NSC, which is not supported anymore.  
 The DCE project page on nsnam, which is often linked to by Github projects and other documentation, yields a 404   www.nsnam.org/overview/projects/direct-code-execution/ (2019-03-12). 
