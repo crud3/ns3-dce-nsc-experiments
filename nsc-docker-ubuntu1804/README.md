@@ -3,10 +3,10 @@
 The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile  
 and  
 https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile  
-Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint).
+Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint) and later on also for flex (https://github.com/westes/flex)
 
 ### Compiler versions
-Because building NSC requires gcc-5 and g++-5 are installed and made default. I have not yet found a reliable way to force scons to use gcc-5 when another gcc version is installed and set as default. Neither `CC=gcc-5 python2 scons.py` nor setting variables in the `custom.py` file which is read in `SConstruct` work. 
+Because building NSC requires gcc-5 and g++-5 are installed and made default in the docker container. On a local machine, scons can be setup to use `gcc-5` and `g++-5` by editing the respective `SConstruct` file (see "Flex error" subsection) as environment vars like `CC` and `CXX` seem to be ignored sometimes.
 
 ## Errors
 First build with scons (`python2 scons.py`) and gcc-7 yields the following error:
@@ -112,7 +112,7 @@ scons: building terminated because of errors.
 Whether one uses bake or scons directly does not matter for those errors.
 
 ### Flex error
-The beforementioned ```libfl.so: undefined reference to `yylex'``` error may be caused by an issue in the flex library version installed for Ubuntu 18.04 (http://lists.linuxfromscratch.org/pipermail/blfs-support/2015-April/076525.html). The proposed fix (replacing `-lfl` with `/usr/lib/libfl.a`) can't be easily applied for NSC. A search for `-lfl` in the sources yields the following results:
+The beforementioned ```libfl.so: undefined reference to `yylex'``` error may be caused by an issue in the flex library version installed for Ubuntu 18.04 (http://lists.linuxfromscratch.org/pipermail/blfs-support/2015-April/076525.html). I did not find an easy and reliable way to implement this fix for building NSC. A search for `-lfl` in the sources yields the following results:
 ```
 grep -r "\-lfl" .
 Binary file ./source/nsc-0.5.3/.sconsign.dblite matches
@@ -162,13 +162,95 @@ scons: Configure: The original builder output was:
   |
 scons: Configure: (cached) yes
 ```
+Scons tries to link with the system `flex` library (linker flag `-lfl`). This is because of the `globaliser/SConstruct` file which is executed by the root `SConstruct` file. In the `globaliser/SConstruct` file, the globaliser program is cconfigured as follows:
+```
+env.Program("globaliser", source_files, 
+    LIBS = ['fl' ],
+    CCFLAGS = '-Wall -std=c++98 -g -O'
+    )
+```
+In there, it is also possible to tell scons to use the correct gcc version:
+```
+env.Program("globaliser", source_files, 
+    LIBS = ['fl' ],
+    CC = 'gcc-5',
+    CXX = 'g++-5',
+    CCFLAGS = '-Wall -std=c++98 -g -O'
+    )
+```
+For information about the flex error, see next subsection. Debugging the build environment used by scons can be achived by analyzing an environment dump. For this, just add `print env.Dump()` after configuration is finshed.
 
+#### Changing flex library version
+One approach to debug the `undefined reference to yylex` error was to change the `flex` library version. Ubuntu 18.04 has `flex 2.6.0-11`, while Ubuntu 16.04 (where NSC can be built with bake) has `flex 2.6.4-6`. Ubuntu 18.04 also has a `flex-old` package, which is `flex 2.5.4a`.
 
-Other search results concerning this error message:  
-https://stackoverflow.com/questions/34782625/undefined-reference-to-yylex  
-https://github.com/sipcapture/captagent/issues/45
+Installing `flex-old` and running `python2 scons.py` yields the following error:
+```
+scons: Reading SConscript files ...
+Checking target architecure...(cached) amd64, checking userland ...amd64
+Checking for C library fl... yes
+scons: done reading SConscript files.
+scons: Building targets ...
+flex -t globaliser/lexer.l > globaliser/lexer.lex.cc
+bison --defines=globaliser//parser.tab.hh globaliser/parser.yc -o globaliser/parser.tab.cc
+globaliser/parser.yc: warning: 1 shift/reduce conflict [-Wconflicts-sr]
+g++ -o globaliser/lexer.lex.o -c -Wall -g -O globaliser/lexer.lex.cc
+globaliser/lexer.l: In function 'void chew_compiler(int)':
+globaliser/lexer.l:237:48: error: 'strlen' was not declared in this scope
+     memcpy(buf, os.str().c_str(), strlen(yytext) + (charno - start) + 1);
+                                                ^
+globaliser/lexer.l:237:72: error: 'memcpy' was not declared in this scope
+     memcpy(buf, os.str().c_str(), strlen(yytext) + (charno - start) + 1);
+                                                                        ^
+globaliser/lexer.l: In function 'void count_newlines(const char*)':
+globaliser/lexer.l:245:30: error: 'strchr' was not declared in this scope
+     while((s = strchr(s, '\n'))) 
+                              ^
+scons: *** [globaliser/lexer.lex.o] Error 1
+scons: building terminated because of errors.
+
+```
+
+Next try (on my local Ubuntu 18.04 machine, not in Docker container): Building flex from source in version 2.6.0 (Ubuntu 16.04 version)
+```
+mkdir flex-2.6.0
+git clone https://github.com/westes/flex.git && cd flex && git checkout v2.6.0
+# Check repo README to learn about dependencies/requirements. All available for Ubuntu 18.04 in package lists
+./autogen.sh
+./configure --prefix=/home/crude/dev/ns3/flex-2.6.0
+make install
+```
+
+Forcing scons to use this library can be achieved by using the `LINKFLAGS` variable in the `globaliser/SConstruct` file.
+```
+# Copy libs folder to NSC dir
+cp -r flex-2.6.0/lib nsc-dev/libs
+```
+In the `globaliser/SConstruct` file, add the `LINKFLAGS` var in the `env.Program` command:
+```
+env.Program("globaliser", source_files, 
+    #LIBS = ['fl' ],
+    LINKFLAGS = '-Llibs -lfl',
+    CC = 'gcc-5',
+    CXX = 'g++-5',
+    CCFLAGS = '-Wall -std=c++98 -g -O'
+    )
+```
+Result is still the same error, but coming from our compiled flex library, so at least the linker flags worked
+```
+Checking target architecure...(cached) amd64, checking userland ...(cached) amd64
+Checking for C library fl... (cached) no
+Did not find libfl.a and/or flex. Please install flex and its development libraries.
+scons: done reading SConscript files.
+scons: Building targets ...
+g++-5 -o globaliser/globaliser -Llibs -lfl globaliser/lexer.lex.o globaliser/parser.tab.o globaliser/ilex.o globaliser/handle_global.o globaliser/node.o
+libs/libfl.so: undefined reference to `yylex'
+collect2: error: ld returned 1 exit status
+scons: *** [globaliser/globaliser] Error 1
+scons: building terminated because of errors.
+
+```
 
 ## Result
 Failure to build NSC on Ubuntu 18.04.
 
-Further investigation and/or consult mailing list.
+Further investigation needed (try other versions of flex library and debugging) and/or consult mailing list.
