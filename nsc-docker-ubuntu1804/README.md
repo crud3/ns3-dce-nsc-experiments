@@ -112,7 +112,7 @@ scons: building terminated because of errors.
 Whether one uses bake or scons directly does not matter for those errors.
 
 ### Flex error
-The beforementioned ```libfl.so: undefined reference to `yylex'``` error may be caused by an issue in the flex library version installed for Ubuntu 18.04 (http://lists.linuxfromscratch.org/pipermail/blfs-support/2015-April/076525.html). I did not find an easy and reliable way to implement this fix for building NSC. A search for `-lfl` in the sources yields the following results:
+The beforementioned ```libfl.so: undefined reference to `yylex'``` error may be caused by an issue in the flex library version installed for Ubuntu 18.04 (http://lists.linuxfromscratch.org/pipermail/blfs-support/2015-April/076525.html). A search for `-lfl` in the sources yields the following results:
 ```
 grep -r "\-lfl" .
 Binary file ./source/nsc-0.5.3/.sconsign.dblite matches
@@ -223,7 +223,7 @@ make install
 Forcing scons to use this library can be achieved by using the `LINKFLAGS` variable in the `globaliser/SConstruct` file.
 ```
 # Copy libs folder to NSC dir
-cp -r flex-2.6.0/lib nsc-dev/libs
+cp -r flex-2.6.0/lib nsc-dev/globaliser/libs
 ```
 In the `globaliser/SConstruct` file, add the `LINKFLAGS` var in the `env.Program` command:
 ```
@@ -249,8 +249,13 @@ scons: *** [globaliser/globaliser] Error 1
 scons: building terminated because of errors.
 
 ```
+I also tried flex 2.5.39 because of https://github.com/sipcapture/captagent/issues/45 , but the `undefined reference to yylex` error remained.
 
 ## Result
 Failure to build NSC on Ubuntu 18.04.
 
 Further investigation needed (try other versions of flex library and debugging) and/or consult mailing list.
+Regarding flex error, see also:
+https://sourceforge.net/p/flex/mailman/search/?q=undefined+reference+to+%60yylex%27  
+https://github.com/brianb/mdbtools/issues/47  (might be useful to solve the main issue without downgrading)
+
