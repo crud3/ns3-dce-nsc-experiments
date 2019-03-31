@@ -1,8 +1,8 @@
 # NSC on Ubuntu 18.04
 ## Build environment / Docker image
-The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile  
-and  
-https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile  
+The Dockerfile is based upon https://github.com/direct-code-execution/dce-dockerfiles/blob/master/ubuntu1604/Dockerfile
+and
+https://github.com/direct-code-execution/ns-3-dce/blob/master/utils/Dockerfile
 Additional packages have been added to facilitate building NSC (according to https://www.nsnam.org/wiki/Installation#Ubuntu.2FDebian.2FMint) and later on also for flex (https://github.com/westes/flex)
 
 ### Compiler versions
@@ -106,7 +106,7 @@ g++ -o globaliser/globaliser globaliser/lexer.lex.o globaliser/parser.tab.o glob
 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/libfl.so: undefined reference to `yylex'
 collect2: error: ld returned 1 exit status
 scons: *** [globaliser/globaliser] Error 1
-scons: building terminated because of errors. 
+scons: building terminated because of errors.
 ```
 
 Whether one uses bake or scons directly does not matter for those errors.
@@ -138,7 +138,7 @@ scons: Configure: The original builder output was:
   |
 scons: Configure: (cached) amd64
 
-scons: Configure: Checking for C library fl... 
+scons: Configure: Checking for C library fl...
 scons: Configure: ".sconf_temp/conftest_1.c" is up to date.
 scons: Configure: The original builder output was:
   |.sconf_temp/conftest_1.c <-
@@ -147,7 +147,7 @@ scons: Configure: The original builder output was:
   |  |
   |  |int
   |  |main() {
-  |  |  
+  |  |
   |  |return 0;
   |  |}
   |  |
@@ -164,24 +164,24 @@ scons: Configure: (cached) yes
 ```
 Scons tries to link with the system `flex` library (linker flag `-lfl`). This is because of the `globaliser/SConstruct` file which is executed by the root `SConstruct` file. In the `globaliser/SConstruct` file, the globaliser program is cconfigured as follows:
 ```
-env.Program("globaliser", source_files, 
+env.Program("globaliser", source_files,
     LIBS = ['fl' ],
     CCFLAGS = '-Wall -std=c++98 -g -O'
     )
 ```
 In there, it is also possible to tell scons to use the correct gcc version:
 ```
-env.Program("globaliser", source_files, 
+env.Program("globaliser", source_files,
     LIBS = ['fl' ],
     CC = 'gcc-5',
     CXX = 'g++-5',
     CCFLAGS = '-Wall -std=c++98 -g -O'
     )
 ```
-For information about the flex error, see next subsection. Debugging the build environment used by scons can be achived by analyzing an environment dump. For this, just add `print env.Dump()` after configuration is finshed.
+For information about the flex error, see next subsection. Debugging the build environment used by scons can be achieved by analyzing an environment dump. For this, just add `print env.Dump()` after configuration is finshed.
 
 #### Changing flex library version
-One approach to debug the `undefined reference to yylex` error was to change the `flex` library version. Ubuntu 18.04 has `flex 2.6.0-11`, while Ubuntu 16.04 (where NSC can be built with bake) has `flex 2.6.4-6`. Ubuntu 18.04 also has a `flex-old` package, which is `flex 2.5.4a`.
+One approach to debug the `undefined reference to yylex` error was to change the `flex` library version. Ubuntu 18.04 has `flex 2.6.4`, while Ubuntu 16.04 (where NSC can be built with bake) has `flex 2.6.0`. Ubuntu 18.04 also has a `flex-old` package, which has `flex 2.5.4a`.
 
 Installing `flex-old` and running `python2 scons.py` yields the following error:
 ```
@@ -203,7 +203,7 @@ globaliser/lexer.l:237:72: error: 'memcpy' was not declared in this scope
                                                                         ^
 globaliser/lexer.l: In function 'void count_newlines(const char*)':
 globaliser/lexer.l:245:30: error: 'strchr' was not declared in this scope
-     while((s = strchr(s, '\n'))) 
+     while((s = strchr(s, '\n')))
                               ^
 scons: *** [globaliser/lexer.lex.o] Error 1
 scons: building terminated because of errors.
@@ -227,7 +227,7 @@ cp -r flex-2.6.0/lib nsc-dev/globaliser/libs
 ```
 In the `globaliser/SConstruct` file, add the `LINKFLAGS` var in the `env.Program` command:
 ```
-env.Program("globaliser", source_files, 
+env.Program("globaliser", source_files,
     #LIBS = ['fl' ],
     LINKFLAGS = '-Llibs -lfl',
     CC = 'gcc-5',
@@ -256,6 +256,6 @@ Failure to build NSC on Ubuntu 18.04.
 
 Further investigation needed (try other versions of flex library and debugging) and/or consult mailing list.
 Regarding flex error, see also:
-https://sourceforge.net/p/flex/mailman/search/?q=undefined+reference+to+%60yylex%27  
+https://sourceforge.net/p/flex/mailman/search/?q=undefined+reference+to+%60yylex%27
 https://github.com/brianb/mdbtools/issues/47  (might be useful to solve the main issue without downgrading)
 
